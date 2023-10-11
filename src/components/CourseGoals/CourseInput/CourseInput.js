@@ -49,7 +49,7 @@ const CourseInput = props => {
       return; //interrupts the function execution, because return stops the function
     }
     props.onAddGoal(enteredValue);
-    setEnteredValue('');
+  setEnteredValue('');
   };
 
   return (
@@ -57,7 +57,8 @@ const CourseInput = props => {
       <FormControl invalid={!isValid}>
         <label>Course Goal</label>
         <input 
-          type="text" 
+          type="text"
+          value={enteredValue}
           onChange={goalInputChangeHandler} />
       </FormControl>
       <Button type="submit">Add Goal</Button>
